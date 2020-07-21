@@ -60,19 +60,83 @@
 // }
 ///////////////////////////
 
-let s = 0;
-let n = Number(prompt("Nhập n"));
+// let s = 0;
+// let n = Number(prompt("Nhập n"));
 
-for (let i = 1; i <= n; i++) {
-    // tính giai thừa của i
-    let p = 1;
-    for (let j = 1; j <= i; j++) {
-        p *= j;
-    }
+// for (let i = 1; i <= n; i++) {
+//     // tính giai thừa của i
+//     let p = 1;
+//     for (let j = 1; j <= i; j++) {
+//         p *= j;
+//     }
 
-    s += p; // s+= i!;
+//     s += p; // s+= i!;
+// }
+
+// console.log(`Tổng là: ${s}`);
+
+
+/////////////////////////////////////
+
+// let n = Number(prompt("Nhập 1 số lớn hơn 8:"));
+
+// while (n <= 8) {
+//     n = Number(prompt("Nhập lại số lớn hơn 8:"));
+// }
+
+// console.log(n);
+
+// Nhập 1 chuỗi nhiều hơn 8 kí tự
+// let password = prompt("Nhập mật khẩu lớn hơn 8 kí tự");
+
+// while (password.length <= 8) {
+//     password = prompt("Nhập mật khẩu lớn hơn 8 kí tự");
+// }
+
+// console.log(password);
+
+// Nhập 2 số, số đầu tiên dương, số thứ 2 âm
+// sai nhập lại cả 2.
+
+let a = Number(prompt("Nhập 1 số dương"));
+let b = Number(prompt("Nhập 1 số âm"));
+
+if (a <= 0 || b >= 0) {
+    a = Number(prompt("Nhập 1 số dương"));
+    b = Number(prompt("Nhập 1 số âm"));
 }
+console.log(a);
+console.log(b);
 
+// Nhập 1 mật khẩu dài hơn 8 kí tự
+// và chứa kí tự @
+// let pass = prompt("Nhập mk > 8 kí tự và chứa @");
 
+// if(!(pass.length > 8 && pass.test('@'))){
+//     pass = prompt("Nhập mk > 8 kí tự và chứa @");
+// }
+// console.log(pass);
 
-console.log(`Tổng là: ${s}`);
+////////////////
+// let user = prompt("Nhập user");
+// let pass = prompt("Nhập pass");
+
+// while(!(user === 'admin' && pass === '123456')){
+//     alert('Sai tk hoặc mk');
+//     user = prompt("Nhập user");
+//     pass = prompt("Nhập pass");
+// }
+
+// alert("Welcome admin");
+
+///
+
+let n = Number(prompt("Nhập 1 số lớn hơn 8:"));
+
+while (true) {
+    n = Number(prompt("Nhập lại số lớn hơn 8:"));
+
+    if (n > 8) {
+        break;
+    }
+}
