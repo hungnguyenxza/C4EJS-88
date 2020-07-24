@@ -1,10 +1,10 @@
-let arr_empty = [];// mảng rỗng
+// let arr_empty = [];// mảng rỗng
 
-let arr = [1, 2, 3, 4, 5];
+// let arr = [1, 2, 3, 4, 5];
 
-let names = ["Tùng", 'Quang1', `Duy`];
+// let names = ["Tùng", 'Quang1', `Duy`];
 
-let mixed = [1, 'Tùng', true]; // không dùng
+// let mixed = [1, 'Tùng', true]; // không dùng
 
 // console.log(names);
 
@@ -49,6 +49,81 @@ let mixed = [1, 'Tùng', true]; // không dùng
 // console.log(first);
 // console.log(last);
 
-let deleted = arr.splice(1, 3); // Xóa và trả về
-console.log(deleted);
+// let deleted = arr.splice(1, 3); // Xóa và trả về
+// console.log(deleted);
 
+// Bài về nhà (bảng)
+
+// 1. Nhập 5 số
+let arr = [6, 45, 10, 25, 6 , 50];
+let totalNumber = 5;
+// for (let i = 0; i < totalNumber; i++) {
+//     let n = Number(prompt("Nhập 1 số"));
+//     arr.push(n);
+// }
+
+// // 2. số chẵn và số lượng
+// console.log(`======== Bài 2 =========`);
+// let totalEven = 0;
+// for (let i = 0; i < arr.length; i++) {
+//     let value = arr[i];
+//     if (value % 2 === 0) {
+//         console.log(value);
+//         totalEven++;
+//     }
+// }
+// console.log(`Có ${totalEven} số chẵn`);
+
+// // cách 2;
+// let arrEven = [];
+// for (let i = 0; i < arr.length; i++) {
+//     let value = arr[i];
+//     if (value % 2 === 0) {
+//         arrEven.push(value);
+//     }
+// }
+// console.log(`Các số chẵn là ${arrEven}
+//             Tổng số: ${arrEven.length}`);
+
+// 3. số > 10 và số lượng
+
+// 4. tính tổng, tbc
+
+// let s = 0;
+// for (let i = 0; i < arr.length; i++) {
+//     const value = arr[i];
+//     s += value;
+// }
+// console.log(`Tổng là: ${s}`);
+// console.log(`Trung bình cộng là: ${s / arr.length}`);
+
+// 5. nhập 1 index, và update giá trị mới
+// for (let i = 0; i < arr.length; i++) {
+//     const value = arr[i];
+//     console.log(`#${i + 1}: ${value}`);
+// }
+// let index = parseInt(prompt("Nhập vị trí muốn sửa")) - 1;
+// if (index >= 0 && index < arr.length) {
+//     arr[index] = Number(prompt("Nhập giá trị mới"));
+
+//     console.log("=========== Cập nhật thành công ===========");
+//     for (let i = 0; i < arr.length; i++) {
+//         const value = arr[i];
+//         console.log(`#${i + 1}: ${value}`);
+//     }
+// } else {
+//     console.log(`Sai vị trí`);
+// }
+// 6. nhập 1 số, xóa số bé hơn số đó
+console.log(arr);
+let number = Number(prompt("Nhập 1 số"));
+for (let i = 0; i < arr.length; i++) {
+    const value = arr[i];
+    if (value < number) {
+        arr.splice(i, 1);
+        i--;
+    }
+}
+console.log(arr);
+
+// =========================== //
