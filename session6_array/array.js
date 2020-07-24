@@ -55,7 +55,7 @@
 // Bài về nhà (bảng)
 
 // 1. Nhập 5 số
-let arr = [6, 45, 10, 25, 6 , 50];
+let arr = [6, 45, 10, 25, 6, 50];
 let totalNumber = 5;
 // for (let i = 0; i < totalNumber; i++) {
 //     let n = Number(prompt("Nhập 1 số"));
@@ -127,3 +127,23 @@ for (let i = 0; i < arr.length; i++) {
 console.log(arr);
 
 // =========================== //
+
+// Tìm min 
+
+let min = arr[0];
+let max = arr[0];
+for (let i = 1; i < arr.length; i++) {
+    const value = arr[i];
+    if (value < min) {
+        min = value;
+    }
+    if (value > max) {
+        max = value;
+    }
+}
+
+console.log(`Giá trị nhỏ nhất là: ${min}`);
+
+// Sắp xếp;
+// 2 vòng lặp lồng nhau
+
