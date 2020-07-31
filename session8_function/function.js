@@ -154,8 +154,8 @@ let phones = [
     }
 ];
 
-// 1. Tìm đt có tên chứa chứ 'iphone'
-// 2. Tìm đt có giá lớn hơn 18 triệu
+// 1. Tìm đt có giá lớn hơn 18 triệu
+// 2. Tìm đt có tên chứa chứ 'iphone'
 // 3. Tìm đt có giá trong khoảng 10 -> 20 triệu
 // 4. Có đt nào < 18 triệu không
 // 5. Tìm các đt của hãng Apple
@@ -164,6 +164,23 @@ let phones = [
 // 8. Có bao nhiêu đt của hãng Sony
 // 9. Sắp xếp đt theo tên a-z
 // 10. Sắp xếp đt theo giá cao -> thấp
+
+let result = phones.filter(function (phone, index) {
+    return phone.price > 18e6;
+});
+
+print(result);
+
+function print(phones) {
+    for (let i = 0; i < phones.length; i++) {
+        const phone = phones[i];
+        console.log(`${i + 1}`);
+        for (const key in phone) {
+            const value = phone[key];
+            console.log(`${key}: ${value}`);
+        }
+    }
+}
 
 
 
