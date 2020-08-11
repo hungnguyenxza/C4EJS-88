@@ -151,11 +151,16 @@ let phones = [
         'name': 'Xperia 2',
         'price': 15e6,
         'brand': 'Sony',
+    },
+    {
+        'name': 'aperia 2',
+        'price': 15e6,
+        'brand': 'Sony',
     }
 ];
 
 // 1. Tìm đt có giá lớn hơn 18 triệu
-// 2. Tìm đt có tên chứa chứ 'iphone'
+// 2. Tìm đt có tên chứa chữ 'iphone'
 // 3. Tìm đt có giá trong khoảng 10 -> 20 triệu
 // 4. Có đt nào < 18 triệu không
 // 5. Tìm các đt của hãng Apple
@@ -169,7 +174,7 @@ let result = phones.filter(function (phone, index) {
     return phone.price > 18e6;
 });
 
-print(result);
+// print(result);
 
 function print(phones) {
     for (let i = 0; i < phones.length; i++) {
@@ -181,6 +186,12 @@ function print(phones) {
         }
     }
 }
+// Sort by name
+
+phones.sort(function (p1, p2){
+    return p2.name.localeCompare(p1.name);
+});
+print(phones);
 
 
 
