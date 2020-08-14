@@ -60,8 +60,33 @@ function onClickWelcome() {
 }
 
 function onClickButton() {
-    document.getElementById('welcome').innerHTML = 
-    "~~~~~ Hello world ~~~~~";
+    document.getElementById('welcome').innerHTML =
+        "~~~~~ Hello world ~~~~~";
 }
 
 // Tạo 1 button, mỗi khi click sẽ hiện ra thời gian hiện tại
+function onGetTimeNow() {
+    let now = new Date();
+    document.getElementById('time-now').innerHTML = now;
+}
+
+function onDisplayName() {
+    let name = document.getElementById("txt-name").value;
+    // tag Input phải dùng value
+    document.getElementById("display-name").innerHTML =
+        `Xin chao ${name}`;
+}
+
+function onRemove(t, e) {
+    //document.getElementsByClassName("btn-remove")[stt].remove();
+    // console.dir(t); // t là 1 dom
+    //t.remove();
+    console.log(e);
+}
+
+function onKeyPress(e) {
+    console.log(e);
+    if (e.keyCode === 13) { // e.key === 'Enter'
+        onDisplayName();
+    }
+}
